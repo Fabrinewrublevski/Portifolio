@@ -1,0 +1,746 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0b9cb;
+    color: #8c163c;
+
+    font-family: "DM Sans", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.mini-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.section-number {
+    font-size: 0.8rem;
+    letter-spacing: 0.15rem;
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   FOTOS
+========================================================= */
+
+.photo {
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9c8399;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+
+    box-shadow: 0 20px 50px rgba(50, 30, 50, 0.12);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+
+    position: relative;
+}
+
+.hero-text {
+    width: 48%;
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 9vw, 9rem);
+
+    line-height: 0.85;
+
+    margin-bottom: 40px;
+}
+
+.hero h1 span {
+    display: block;
+
+    font-size: 0.65em;
+
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 450px;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 60px;
+}
+
+.scroll {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+}
+
+.scroll span {
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   FOTOS DO HERO
+========================================================= */
+
+.hero-photos {
+    width: 42%;
+    height: 600px;
+
+    position: relative;
+}
+
+.hero-photos .photo-main {
+    position: absolute;
+
+    width: 70%;
+    height: 80%;
+
+    right: 5%;
+    top: 5%;
+}
+
+.hero-photos .photo-small {
+    position: absolute;
+
+    width: 42%;
+    height: 35%;
+
+    left: 0;
+    bottom: 4%;
+
+    transform: rotate(-7deg);
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.section {
+    min-height: 100vh;
+
+    padding: 130px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 100px;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.section-content {
+    width: 48%;
+
+    position: relative;
+}
+
+.section-content h2 {
+    font-size: clamp(3rem, 5vw, 5.5rem);
+
+    line-height: 1;
+
+    margin-bottom: 45px;
+}
+
+.section-content h2 span {
+    display: block;
+
+    font-style: italic;
+}
+
+.section-content p {
+    max-width: 650px;
+
+    margin-bottom: 22px;
+
+    font-size: 1rem;
+}
+
+.highlight {
+    font-weight: 600;
+
+    border-left: 3px solid #2d2030;
+
+    padding-left: 20px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   FOTOS SOBREPOSTAS
+========================================================= */
+
+.section-photo {
+    width: 42%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.photo-stack {
+    width: 450px;
+    height: 550px;
+
+    position: relative;
+}
+
+
+/* FOTO DE TRÁS */
+
+.photo-stack .photo-one {
+    position: absolute;
+
+    width: 75%;
+    height: 78%;
+
+    top: 3%;
+    left: 3%;
+
+    transform: rotate(-5deg);
+}
+
+
+/* FOTO DA FRENTE */
+
+.photo-stack .photo-two {
+    position: absolute;
+
+    width: 60%;
+    height: 55%;
+
+    right: 0;
+    bottom: 3%;
+
+    transform: rotate(7deg);
+
+    border: 10px solid white;
+}
+
+
+/* =========================================================
+   PALAVRA DECORATIVA
+========================================================= */
+
+.little-word {
+    position: absolute;
+
+    right: -30px;
+    bottom: -50px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 4rem;
+
+    opacity: 0.08;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   TRABALHO
+========================================================= */
+
+.achievement {
+    margin-top: 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(45, 32, 48, 0.25);
+
+    padding-top: 20px;
+}
+
+.achievement strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.4rem;
+}
+
+.achievement span {
+    font-size: 0.85rem;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   ARTESANATO
+========================================================= */
+
+.craft-words {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+.craft-words span {
+    border: 1px solid rgba(45, 32, 48, 0.3);
+
+    padding: 10px 17px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.12rem;
+}
+
+
+/* =========================================================
+   O QUE EU GOSTO
+========================================================= */
+
+.likes {
+    padding: 150px 10%;
+}
+
+.likes-title {
+    max-width: 700px;
+
+    margin-bottom: 100px;
+}
+
+.likes-title h2 {
+    font-size: clamp(3rem, 6vw, 6rem);
+
+    line-height: 1;
+}
+
+.likes-title h2 span {
+    display: block;
+
+    font-style: italic;
+}
+
+.likes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    border-top: 1px solid rgba(45, 32, 48, 0.2);
+}
+
+.like-item {
+    min-height: 220px;
+
+    padding: 35px;
+
+    border-right: 1px solid rgba(45, 32, 48, 0.2);
+    border-bottom: 1px solid rgba(45, 32, 48, 0.2);
+}
+
+.like-item:nth-child(3n) {
+    border-right: none;
+}
+
+.like-item span {
+    display: block;
+
+    font-size: 0.7rem;
+
+    opacity: 0.5;
+
+    margin-bottom: 40px;
+}
+
+.like-item strong {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+.like-item p {
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   SONHOS
+========================================================= */
+
+.dreams {
+    min-height: 100vh;
+
+    position: relative;
+
+    padding: 150px 10%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.dreams-background {
+    position: absolute;
+
+    left: -5%;
+
+    bottom: 5%;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20vw;
+
+    opacity: 0.05;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+}
+
+.dreams-content {
+    width: 55%;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.dreams-content h2 {
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+
+    line-height: 0.95;
+
+    margin: 30px 0 50px;
+}
+
+.dreams-content h2 span {
+    display: block;
+
+    font-style: italic;
+}
+
+.dreams-content p {
+    max-width: 700px;
+
+    margin-bottom: 22px;
+}
+
+.dream-photo {
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.dream-image {
+    width: 400px;
+    height: 550px;
+
+    transform: rotate(5deg);
+
+    border: 12px solid white;
+}
+
+.dream-quote {
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.dream-quote span {
+    font-size: 2rem;
+}
+
+.dream-quote p {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.8rem;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    min-height: 70vh;
+
+    padding: 150px 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.footer-small {
+    font-size: 0.7rem;
+
+    letter-spacing: 0.3rem;
+
+    margin-bottom: 35px;
+}
+
+footer h2 {
+    font-size: clamp(3rem, 7vw, 8rem);
+
+    line-height: 0.95;
+}
+
+footer h2 span {
+    display: block;
+
+    font-style: italic;
+}
+
+.footer-bottom {
+    margin-top: 100px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15rem;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero,
+    .section,
+    .section.reverse,
+    .dreams {
+        flex-direction: column;
+
+        padding: 100px 7%;
+    }
+
+
+    .hero-text,
+    .section-content,
+    .section-photo,
+    .dreams-content,
+    .dream-photo {
+        width: 100%;
+    }
+
+
+    .hero {
+        gap: 70px;
+    }
+
+
+    .hero-photos {
+        width: 90%;
+
+        height: 500px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(4rem, 18vw, 7rem);
+    }
+
+
+    .section {
+        gap: 70px;
+    }
+
+
+    .section-photo {
+        order: 2;
+    }
+
+
+    .section-content {
+        order: 1;
+    }
+
+
+    .photo-stack {
+        width: 90%;
+
+        max-width: 450px;
+    }
+
+
+    .likes {
+        padding: 100px 7%;
+    }
+
+
+    .likes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .like-item:nth-child(3n) {
+        border-right: 1px solid rgba(45, 32, 48, 0.2);
+    }
+
+
+    .like-item:nth-child(2n) {
+        border-right: none;
+    }
+
+
+    .dreams {
+        gap: 70px;
+    }
+
+
+    .dreams-content {
+        width: 100%;
+    }
+
+
+    .dream-photo {
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 70px;
+    }
+
+
+    .hero-photos {
+        height: 400px;
+    }
+
+
+    .section {
+        padding: 90px 6%;
+    }
+
+
+    .section-content h2 {
+        font-size: 3.3rem;
+    }
+
+
+    .photo-stack {
+        height: 430px;
+    }
+
+
+    .likes-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .like-item,
+    .like-item:nth-child(2n),
+    .like-item:nth-child(3n) {
+        border-right: none;
+    }
+
+
+    .dreams {
+        padding: 100px 6%;
+    }
+
+
+    .dream-photo {
+        width: 90%;
+    }
+
+
+    .dream-image {
+        width: 100%;
+        height: 450px;
+    }
+
+
+    footer {
+        padding: 100px 6%;
+    }
+
+}
+
