@@ -1,3 +1,5 @@
+
+
 /* =========================================================
    CONFIGURAÇÕES GERAIS
 ========================================================= */
@@ -335,26 +337,49 @@ p {
    ARTESANATO
 ========================================================= */
 
+/* =========================================================
+   ARTESANATO
+========================================================= */
+
 .craft-words {
     display: flex;
 
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 15px;
 
     margin-top: 40px;
 }
 
-.craft-words span {
+
+.craft-button {
+    background: transparent;
+
     border: 1px solid rgba(45, 32, 48, 0.3);
 
-    padding: 10px 17px;
+    padding: 12px 20px;
+
+    font-family: "DM Sans", sans-serif;
 
     font-size: 0.7rem;
 
     letter-spacing: 0.12rem;
+
+    color: #8c163c;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
+
+.craft-button:hover {
+    background: #8c163c;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
 
 /* =========================================================
    O QUE EU GOSTO
@@ -581,6 +606,156 @@ footer h2 span {
     opacity: 0.5;
 }
 
+/* =========================================================
+   GALERIA FLUTUANTE
+========================================================= */
+
+.galeria {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(45, 32, 48, 0.75);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+
+.galeria.aberta {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   CAIXA DA GALERIA
+========================================================= */
+
+.galeria-conteudo {
+    position: relative;
+
+    width: min(1100px, 95%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #f0b9cb;
+
+    padding: 50px;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+
+.galeria-conteudo h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 4rem;
+
+    color: #8c163c;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   BOTÃO FECHAR
+========================================================= */
+
+.fechar-galeria {
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    background: none;
+
+    border: none;
+
+    color: #8c163c;
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+.fechar-galeria:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   FOTOS DA GALERIA
+========================================================= */
+
+.galeria-fotos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.foto-galeria {
+    aspect-ratio: 1 / 1;
+
+    background: #ffffff;
+
+    padding: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(45, 32, 48, 0.15);
+
+    transform: rotate(-1deg);
+
+    transition: 0.3s;
+}
+
+
+.foto-galeria:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+
+.foto-galeria:hover {
+    transform: scale(1.04) rotate(0deg);
+
+    z-index: 2;
+}
+
+
+.foto-galeria img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
 
 /* =========================================================
    RESPONSIVIDADE
@@ -680,6 +855,23 @@ footer h2 span {
         width: 80%;
     }
 
+        .galeria {
+        padding: 20px;
+    }
+
+    .galeria-conteudo {
+        padding: 35px 25px;
+    }
+
+    .galeria-conteudo h2 {
+        font-size: 3rem;
+    }
+
+    .galeria-fotos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
 }
 
 
@@ -742,5 +934,8 @@ footer h2 span {
         padding: 100px 6%;
     }
 
-}
+        .galeria-fotos {
+        grid-template-columns: 1fr;
+    }
 
+}
