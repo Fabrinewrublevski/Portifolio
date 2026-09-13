@@ -8,6 +8,7 @@
     <title>Fabrine | Minha História</title>
 
     <link rel="stylesheet" href="eu.css">
+    <script src="eu.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -158,7 +159,7 @@
             <p>
                 Minha história com a tecnologia começou ainda no
                 Ensino Médio, quando fiz durante três anos o curso
-                técnico em Análise e Desenvolvimento de Sistemas.
+                técnico em Sistemas de Informação.
             </p>
 
             <p>
@@ -192,11 +193,11 @@
             <div class="photo-stack">
 
                 <div class="photo photo-one">
-                    <img src="jak.jpeg" alt="Foto da Fabrine">
+                    <img src="re.jpeg" alt="Foto da Fabrine">
                 </div>
 
                 <div class="photo photo-two">
-                    <img src="re.jpeg" alt="Foto da Fabrine">
+                    <img src="jak.jpeg" alt="Foto da Fabrine">
                 </div>
 
             </div>
@@ -302,7 +303,7 @@
 
             <p>
                 Desde pequena, o artesanato faz parte da minha vida.
-                Aprendi a fazer crochê, tear e tricô e, com o tempo,
+                Aprendi a fazer crochê e, com o tempo,
                 fui descobrindo novas formas de criar.
             </p>
 
@@ -329,10 +330,13 @@
 
             <div class="craft-words">
 
-                <span>CROCHÊ</span>
-                <span>TRICÔ</span>
-                <span>TEAR</span>
-                <span>COSTURA</span>
+                <button class="craft-button" onclick="abrirGaleria('croche')">
+                    CROCHÊ
+                </button>
+
+                <button class="craft-button" onclick="abrirGaleria('costura')">
+                    COSTURA
+                </button>
 
             </div>
 
@@ -520,7 +524,38 @@
     </footer>
 
 
-</body>
+    <!-- GALERIA DE CROCHÊ -->
 
-</html>
-```
+<div id="galeria-croche" class="galeria">
+
+    <div class="galeria-conteudo">
+
+        <button class="fechar-galeria" onclick="fecharGaleria('croche')">
+            ×
+        </button>
+
+        <p class="mini-title">MEUS TRABALHOS</p>
+
+        <h2>Crochê</h2>
+
+        <div class="galeria-fotos">
+
+            <div class="foto-galeria">
+                <img src="tapete.jpeg" alt="Trabalho de crochê">
+            </div>
+
+            <div class="foto-galeria">
+                <img src="boloça.jpeg" alt="Trabalho de crochê">
+            </div>
+
+            <div class="foto-galeria">
+                <img src="papel.jpeg" alt="Trabalho de crochê">
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</div>
